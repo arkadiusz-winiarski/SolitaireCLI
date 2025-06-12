@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>📦 Pasjans - README</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: #c9d1d9;
+      background-color: #0d1117;
+      padding: 2em;
+    }
+
+    h1, h2 {
+      color: #58a6ff;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 0.3em;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    code {
+      background-color: #161b22;
+      padding: 0.2em 0.4em;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #e6edf3;
+    }
+
+    pre {
+      background-color: #161b22;
+      color: #e6edf3;
+      padding: 1em;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    ul, ol {
+      margin-left: 1.5em;
+    }
+
+    img {
+      display: block;
+      margin: 12px 0;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+      max-width: 100%;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .badge {
+      background-color: #238636;
+      color: white;
+      padding: 0.2em 0.6em;
+      font-size: 0.85em;
+      border-radius: 4px;
+      margin-left: 0.5em;
+    }
+
+    .warning {
+      background-color: #442d00;
+      color: #ffdf5d;
+      padding: 1em;
+      border-left: 5px solid #e3b341;
+      border-radius: 4px;
+      margin: 1em 0;
+    }
+
+    .success {
+      background-color: #0f5132;
+      color: #b1f2c1;
+      padding: 1em;
+      border-left: 5px solid #198754;
+      border-radius: 4px;
+      margin: 1em 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>📦 Pasjans</h1>
+
+  <h2>🔧 Kompilacja w Visual Studio</h2>
+  <p>Aby zbudować ten projekt w <strong>Visual Studio</strong>, wykonaj następujące kroki:</p>
+  <ol>
+    <li>Otwórz plik <code>.sln</code> w Visual Studio:<br>
+      <img src="readme-images/open_sln.png" alt="Otwórz plik SLN" width="600">
+    </li>
+    <li>Wybierz konfigurację <code>Debug</code> lub <code>Release</code> z górnego menu:<br>
+      <img src="readme-images/configurations.png" alt="Wybór konfiguracji" width="600">
+    </li>
+    <li>Kliknij <strong>Build → Build Solution</strong> (lub skrót <code>Ctrl+Shift+B</code>):<br>
+      <img src="readme-images/build_solution.png" alt="Build solution" width="600">
+    </li>
+  </ol>
+
+  <h2>🐞 Tryb Debug</h2>
+  <ul>
+    <li>✅ Wykrywanie wycieków pamięci (Memory Leak Detection)</li>
+    <li>✅ Asercje (assert)</li>
+  </ul>
+  <p>Używaj tej konfiguracji podczas <strong>rozwoju i testowania</strong> aplikacji.</p>
+
+  <h2>🚀 Tryb Release</h2>
+  <ul>
+    <li>❌ Asercje są wyłączone</li>
+    <li>❌ Brak detekcji wycieków pamięci</li>
+    <li>✅ Kod jest zoptymalizowany pod kątem wydajności</li>
+  </ul>
+
+  <h2>📁 Dokumentacja</h2>
+  <a href="Solitaire/docs/html/index.html" target="_blank">Przejdź do dokumentacji</a>
+
+  <h2>▶️ Uruchamianie gry</h2>
+  <p>Możesz uruchomić grę bezpośrednio z eksploratora lub przez <strong>terminal Windows (cmd)</strong>:</p>
+
+  <h3>📂 Lokalizacja pliku EXE</h3>
+  <pre>Solitaire\x64\Konfiguracja\Solitaire.exe</pre>
+
+  <h3>💻 Uruchomienie przez terminal (cmd)</h3>
+  <ol>
+    <li>Otwórz terminal (np. <code>Win + R → cmd</code>)</li>
+    <li>Przejdź do folderu projektu:
+      <pre>cd C:\Users\TwojaNazwaUzytkownika\source\repos\Solitaire\x64\Konfiguracja</pre>
+    </li>
+    <li>Uruchom plik wykonywalny:
+      <pre>Solitaire.exe</pre>
+    </li>
+  </ol>
+
+  <div class="success">
+    Gra powinna się uruchomić w oknie terminala 🎮.
+  </div>
+
+  <h2>🎮 Jak grać w grę</h2>
+  <p>Poniżej znajdziesz listę dostępnych komend w grze wraz z ich opisem:</p>
+  <ul>
+    <li><code>wyjdz</code> - wychodzi z gry</li>
+    <li><code>reset</code> - resetuje grę</li>
+    <li><code>przetasuj</code> - przetasowuje karty, gdy wszystkie karty zostały dobrane</li>
+    <li><code>dobierz</code> lub <code>d</code> - dobiera kartę z puli</li>
+    <li><code>przenies</code> lub <code>p [od_nr_kolumny] [do_nr_kolumny] [ilość_kart]</code> - przenosi wskazaną liczbę kart z jednej kolumny do drugiej</li>
+    <li><code>z_puli_do_kolumny</code> lub <code>pk [nr_kolumny]</code> - przenosi dobraną kartę z puli do kolumny</li>
+    <li><code>z_puli_do_rezerwy</code> lub <code>pr [nr_rezerwy]</code> - przenosi dobraną kartę z puli do rezerwy</li>
+    <li><code>z_kolumny_do_rezerwy</code> lub <code>kr [nr_kolumny] [nr_rezerwy]</code> - przenosi kartę z kolumny do rezerwy</li>
+    <li><code>z_rezerwy_do_kolumny</code> lub <code>rk [nr_rezerwy] [nr_kolumny]</code> - przenosi kartę z rezerwy do kolumny</li>
+    <li><code>menu</code> uruchamia główne menu</li>
+    <li><code>pomoc</code> wyświetla liste komend</li>
+    <li><code>zapisz [nazwa zapisu]</code> - zapisuje grę</li>
+  </ul>
+  <p><em>Przykład użycia:</em> <code>p 3 5 2</code> - przenosi 2 karty z kolumny 3 do kolumny 5.</p>
+</body>
+</html>

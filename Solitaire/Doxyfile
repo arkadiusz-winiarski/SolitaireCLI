@@ -1,0 +1,30 @@
+# Doxyfile 1.9.4
+
+PROJECT_NAME           = "Solitaire"
+PROJECT_BRIEF          = "A command-line version of the classic Solitaire card game"
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = YES
+
+EXTRACT_ALL            = YES
+RECURSIVE              = YES
+INPUT                  = src/
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+GENERATE_XML           = NO
+
+FILE_PATTERNS          = *.c *.cpp *.h *.hpp
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+
+WARNINGS               = YES
+QUIET                  = NO
+
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+GENERATE_TREEVIEW      = YES
